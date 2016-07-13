@@ -1,0 +1,21 @@
+.header {
+	background: $cLight;
+	padding: 20px 0;
+	&__link {
+		background-color: $cDark;
+		color: $cLight;
+		font-weight: bold;
+		font-size: 1.1rem;
+		background-image: url('../img/arrow.png');
+		background-repeat: no-repeat;
+		background-position: 95px;
+		padding-right: 30px;
+		float: left;
+	}
+	@media screen and (max-width: 767px) {
+		text-align: center;
+	}
+	&__menu {
+		float: left;
+	}
+}

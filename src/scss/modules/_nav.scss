@@ -1,0 +1,39 @@
+.nav {
+	margin-top: 60px;
+	float: right;
+	@media screen and (max-width: 767px) {
+		float: none;
+		margin: 10px auto 0 auto;
+		width: 100%;
+		max-width: 160px;
+	}
+}
+
+.dropdown-toggle {
+	font-size: 1.4rem;
+	font-weight: bold;
+	color: $cLight;
+	background: $cDark;
+}
+
+.menu {
+	margin: 4px 0 0 0;
+	padding: 0;
+	list-style-type: none;
+	overflow: hidden;
+	&__item {
+		margin-right: 30px;
+		float: left;
+	}
+	&.mobile {
+		.menu__item {
+			float: none;
+			margin: 0;
+		}
+	}
+	&__link {
+		font-size: 1.6rem;
+		color: $cDark;
+		font-weight: bold;
+	}
+}

@@ -1,0 +1,27 @@
+body {
+	background: $cLight;
+	margin: 0;
+	font-size: 1.1rem;
+	font-family: 'Arial Regular', sans-serif;
+}
+
+a,
+a:hover {
+	text-decoration: none;
+	color: $cPrimary;
+}
+
+.row {
+	margin-left: -10px;
+	margin-right: -10px;
+	> * {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+}
+
+.container {
+	max-width: 928px;
+	padding-left: 10px;
+	padding-right: 10px;
+}

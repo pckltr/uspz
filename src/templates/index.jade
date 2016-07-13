@@ -1,0 +1,101 @@
+html(lang='ro')
+	head
+		link(rel='stylesheet', type='text/css', href='css/vendor/bootstrap.css')
+		link(rel='stylesheet', type='text/css', href='css/style.css')
+		meta(charset='utf-8')
+		meta(name='viewport', content='initial-scale=1')
+		title Un site pe zi
+	body
+		ul.info
+			li.info__item
+				a(href='')
+					img(src='../img/contact.png')
+			li.info__item
+				a(href='')
+					img(src='../img/twitter-w.png')
+			li.info__item
+				a(href='')
+					img(src='../img/faq.png')
+		header.header
+			.container
+				.row
+					.col-xs-12.col-sm-2
+						a.header__logo.logo(href='')
+							img(src='img/logo.png')
+					.col-xs-12.col-sm-8.col-md-7.col-sm-offset-2.col-md-offset-3
+						nav.nav
+							ul.header__menu.menu.hidden-xs
+								each item in ['Despre proiect', 'Arhiva', 'Agentii']
+									li.menu__item
+										a.menu__link(href='')= item
+							a.header__link.btn.hidden-xs(href='') Inscrie un site
+
+							.dropdown.hidden-sm.hidden-md.hidden-lg
+								#dropdownMenu1.btn.dropdown-toggle(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='true')
+									| Meniu
+									span.caret
+								ul.header__menu.menu.mobile.dropdown-menu(aria-labelledby='dropdownMenu1')
+									each item in ['Despre proiect', 'Arhiva', 'Agentii', 'Inscrie un site']
+										li.menu__item
+											a.menu__link(href='')= item
+		section.carousel
+			.container
+				.row
+					.col-xs-12.col-md-8
+						img.carousel__image(src='img/1.jpg')
+					.col-xs-12.col-md-4
+						.carousel__details
+							.carousel__date.pull-left 22.06.2009
+							.carousel__votes.pull-right 450
+							.clearfix
+							.carousel__title Porsche Panamera
+							.carousel__company Companie:
+								span F-I
+							.carousel__client Client:
+								span Porsche
+							.carousel__description Acest proiect isi propune sa trateze gestiunea operatiilor la o agentie de turism si anume sa tinem evidenta ofertelor, clientilor si programarilor care se fac in agentie. Angajatii agentiei vor introduce in calculator toate ofertele agentiei. Oamenii vor intra in agentie si in caz ca vor dori sa faca o programare pentru una din ofertele existente in baza de date, datele lor vor fi introduse in baza de date, pentru a se tine o evidenta clara a programarilor
+							a.carousel__link.pull-right(href='') viziteaza website
+							.clearfix
+							.carousel__nav
+								a.carousel__previous.pull-left(href='') siteul anterior
+								a.carousel__next.pull-right(href='') siteul urmator
+		section.vote
+			.container
+				.row
+					.col-xs-12
+						.vote__title Voteaza site-ul de maine!
+				ul.vote__list.list.row
+					- var sites=[{image:"2", votes:"122", title:"BIO",author:"Korea Style",description:"Acest proiect isi propune sa trateze gestiunea operatiilor la o agentie de turism si anume sa tinem evidenta ofertelor, clientilor si programarilor care se fac in agentie."},{image:"3", votes:"108",title:"Adidas Originals",author:"Sid Lee, Hue Web Studio",description:"Angajatii agentiei vor introduce in calculator toate ofertele agentiei. Oamenii vor intra in agentie si in caz ca vor dori sa faca o programare pentru una din ofertele existente in baza de date, datele lor vor fi introduse in baza de date, pentru a se tine o evidenta clara a programarilor."},{image:"4", votes:"197",title:"Intru 3d",author:"Autor: 2fresh, Hue Web Studio",description:"Tinem evidenta ofertelor, clientilor si programarilor care se fac in agentie. Oamenii vor intra in agentie si in caz ca vor dori sa faca o programare pentru una din ofertele existente in baza de date."},{image:"5", votes:"128",title:"Wulffmorgenthaler",author:"Autor: Korea Style",description:"Acest proiect isi propune sa trateze gestiunea operatiilor la o agentie de turism si anume sa tinem evidenta ofertelor, clientilor si programarilor care se fac in agentie."},{image:"6", votes:"235",title:"Quack",author:"Autor: Sid Lee, Hue Web Studio",description:"Angajatii agentiei vor introduce in calculator toate ofertele agentiei. Oamenii vor intra in agentie si in caz ca vor dori sa faca o programare pentru una din ofertele existente in baza de date, datele lor vor fi introduse in baza de date, pentru a se tine o evidenta clara a programarilor."},{image:"7", votes:"164",title:"Liness",author:"Autor: 2fresh, Hue Web Studio",description:"Tinem evidenta ofertelor, clientilor si programarilor care se fac in agentie. Oamenii vor intra in agentie si in caz ca vor dori sa faca o programare pentru una din ofertele existente in baza de date."}];
+					each site in sites
+						li.list__item.col-xs-12.col-sm-6.col-md-4
+							a.list__link(href='')
+								.bg
+								img.list__image(src='img/' + site.image + '.jpg')
+							.list__votes= site.votes
+							.list__title.pull-left= site.title
+							ul.list__social.pull-right
+								li
+									a(href='')
+										img(src='../img/twitter-b.png')
+								li
+									a(href='')
+										img(src='../img/facebook-b.png')
+								li
+									a(href='')
+										img(src='../img/yahoo-b.png')
+							.clearfix
+							.list__author Autor:
+								span= site.author
+							.list__description
+								.wrapper= site.description
+		footer.footer
+			.container
+				.row
+					.col-xs-12
+						.footer__wrapper
+							img.footer__logo.logo(src='img/logo.png')
+							.copyright ©2010
+								span unSITEpeZI
+		script(type='text/javascript', src='js/jquery.min.js', async='')
+		script(type='text/javascript', src='js/bootstrap.min.js', async='')
+
